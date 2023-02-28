@@ -1,0 +1,23 @@
+a:hover{
+    text-decoration: none;
+}
+
+#header{
+    color: white;
+    background: #e74c3c;
+}
+
+#logo{
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+#menu li a{ 
+    color:#fff;
+    padding: 15px 10px;
+    display: block;
+}
+
+#menu li a:hover{
+    background-color: #c0392b;
+}
