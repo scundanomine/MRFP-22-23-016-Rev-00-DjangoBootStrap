@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
-    <title>Bootstrap</title>
+    <title>Nile</title>
   </head>
   <body>
     <div id="header">
@@ -28,6 +30,35 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="banner" class="py-5" style='background-image: url("{% static 'img/abc.jpg' %}");'>
+      <div class="container">
+        <div class="col-md-8 col-lg-6">
+          <div class="jumbotron">
+            <h1 class="display-4">Some Heading Goes Here</h1>
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quaerat eaque fugit quia sequi soluta, recusandae eum autem atque debitis ab ullam. Labore, at numquam.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container section">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class='section-head text-center mb-5'>Some Heading Goes Here</h2>
+        </div>
+      {% for n in title %}
+        <div class="col-md-4 mb-5">
+          <div class="service-box">
+            <i class="fa fa-anchor" aria-hidden="true"></i>
+            <h3>Some Heading</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, nobis!</p>
+          </div> 
+        </div>
+      {% endfor %}
       </div>
     </div>
 
