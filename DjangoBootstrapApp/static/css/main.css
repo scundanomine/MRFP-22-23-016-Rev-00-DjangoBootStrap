@@ -2,6 +2,21 @@ a:hover{
     text-decoration: none;
 }
 
+.section h2.section-head{
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section h2.section-head::after{
+    background-color: #e74c3c;
+    content:'';
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 20px auto;
+}
+
 #header{
     color: white;
     background: #e74c3c;

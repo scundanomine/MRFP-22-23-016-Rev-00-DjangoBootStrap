@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div id="banner" class="py-5" style='background-image: url("{% static 'img/abc.jpg' %}");'>
+    <div id="banner" class="py-2" style='background-image: url("{% static 'img/abc.jpg' %}");'>
       <div class="container">
         <div class="col-md-8 col-lg-6">
           <div class="jumbotron">
@@ -48,17 +48,27 @@
     <div class="container section">
       <div class="row">
         <div class="col-md-12">
-          <h2 class='section-head text-center mb-5'>Some Heading Goes Here</h2>
+          <h2 class='section-head'>Some Heading Goes Here</h2>
         </div>
-      {% for n in title %}
+      {% for n in serviceData %}
         <div class="col-md-4 mb-5">
           <div class="service-box">
-            <i class="fa fa-anchor" aria-hidden="true"></i>
-            <h3>Some Heading</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, nobis!</p>
+            <i class="{{n.serviceIcon}} fa-2x" aria-hidden="true"></i>
+            <h3>{{n.serviceTitle}}</h3>
+            <p>{{n.serviceDesc}}</p>
           </div> 
         </div>
       {% endfor %}
+      </div>
+    </div>
+
+    <div id="testimonials" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            
+          </div>
+        </div>
       </div>
     </div>
 
