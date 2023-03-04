@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -23,7 +22,7 @@
             <h1 id="logo">Company Name</h1>
           </div>
           <div class="col-md-8">
-            <ul id="menu" class="list-unstyled float-right list-inline">
+            <ul id="menu" class="list-unstyled float-md-right list-inline">
               <li class="list-inline-item"><a href="">Home</a></li>
               <li class="list-inline-item"><a href="">About</a></li>
               <li class="list-inline-item"><a href="">Gallery</a></li>
@@ -53,7 +52,7 @@
           <h2 class='section-head'>Some Heading Goes Here</h2>
         </div>
       {% for n in serviceData %}
-        <div class="col-md-4 mb-5">
+        <div class="col-sm-6 col-md-4 mb-5">
           <div class="service-box">
             <i class="{{n.serviceIcon}} fa-2x" aria-hidden="true"></i>
             <h3>{{n.serviceTitle}}</h3>
@@ -68,28 +67,28 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class='section-head mt-3'>Testimonals</h2>
+            <h2 class='section-head'>Testimonals</h2>
           </div>
           {% for m in testData %}
-          <div class="col-md-6 my-3">
+          <div class="col-md-6 mb-3">
             <p>{{m.testDesc}}</p>
             <img src="/media/{{m.testImg}}" alt="">
-            <div>{{m.testName}}</div>
-            <div>{{m.testCompany}}</div>
+            <div class="pl-md-5 ml-md-5">{{m.testName}}</div>
+            <div class="pl-md-5 ml-md-5">{{m.testCompany}}</div>
           </div>
           {% endfor %}
         </div>
       </div>
     </div>
-
-    <div id="news" class="container section">
+	
+	<div id="news" class="container section">
       <div class="row">
         <div class="col-md-12">
           <h2 class="section-head mt-3">Recent News</h2>
         </div>
         {% for l in newsData %}
         <div class="col-lg-3">
-          <div class="new-post">
+          <div class="news-post">
             <img class="img-fluid" src="/media/{{l.newsImg}}" alt="">
             <h3><a href="">{{l.newsHead}}</a></h3>
             <div class="post-date">
@@ -103,6 +102,55 @@
           </div>
         </div>
         {% endfor %}
+      </div>
+    </div>
+
+    <div id="footer-sidebar">
+      <div class="container">
+        <div class="row">      
+          <div class="col-sm-6 col-md-4">
+            <div class="footer-widget">
+              <h4>About Company</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magni illum ? A ipsum repudiandae consequatur!</p>
+            </div>
+          </div>  
+          <div class="col-sm-6 col-md-4">
+            <div class="footer-widget">
+              <h4>Latest News</h4>
+              <ul class="list-unstyled">
+                {% for o in sideFooterData %}
+                <li><a href=""><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet.</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>  
+          <div class="col-sm-6 col-md-4">
+            <div class="footer-widget">
+              <h4>Company Address</h4>
+              <address>
+                <b>eClinical Works</b>
+                R165a, West Jawahar Park <br>
+                Laxmi Nagar, Delhi <br>
+                P-110092
+              </address>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6">copyright@2020 Company Name.</div>
+            <div class="col-md-6">
+              <ul id="social-icons" class="float-md-right list-inline list-unstyled">
+                <li class="list-inline-item"><a href="" class="fa fa-facebook-square"></a></li>
+                <li class="list-inline-item"><a href="" class="fa fa-twitter-square"></a></li>
+                <li class="list-inline-item"><a href="" class="fa fa-linkedin-square"></a></li>
+              </ul>
+            </div>
+        </div>
       </div>
     </div>
 

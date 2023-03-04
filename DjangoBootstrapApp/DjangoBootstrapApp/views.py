@@ -6,10 +6,12 @@ def homePage(request):
     serviceData = Service.objects.all()
     testData = Testimonials.objects.all()
     newsData = News.objects.all()
+    sideFooterData = range(5)
     
     data = {
         'serviceData': serviceData,
         'testData': testData,
-        'newsData': newsData
+        'newsData': newsData,
+        'sideFooterData': sideFooterData
     }
     return render(request, "index.html", data)    
