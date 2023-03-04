@@ -65,8 +65,7 @@ background: rgba(255, 255, 255, 0);
 #testimonials{
     color: #fff;
     background-repeat: no-repeat;
-    background-size: 1200px 500px;
-    background-blend-mode: normal;
+    background-size: 1900px 520px;
     /* background-position: top;
     background-attachment: fixed; */
 }
@@ -82,4 +81,14 @@ background: rgba(255, 255, 255, 0);
 
 #testimonials img{
     border-radius: 50%;
+}
+
+#news h3 a{
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+a.readmore{
+    font-size: 14px;
+    color: #e74c3c;
 }
